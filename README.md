@@ -1,4 +1,4 @@
-# Negative Squaring — Toy Experiments:)
+# Negative Squaring — Toy Experiments
 
 Code accompanying the writeup "Negative Squaring: Pre-Tilting Weights to
 Preserve Reasoning in Quantized Models" (July 2026). See
