@@ -2,7 +2,7 @@
 
 Code accompanying the writeup "Negative Squaring: Pre-Tilting Weights to
 Preserve Reasoning in Quantized Models" (July 2026). See
-`negative-squaring-paper.md` in this repository for the full plain-language paper.
+`negative-squaring-paper_1.md` in this repository for the full plain-language paper.
 
 ## The idea in one line
 
