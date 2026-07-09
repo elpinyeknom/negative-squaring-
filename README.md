@@ -22,6 +22,12 @@ weights round.
 ## Run it
 
 Requires only Python 3 and numpy:
+
+```
+pip install numpy
+python 3_final_with_clipping.py
+```
+
 Each script is self-contained, seeded, and reproduces the numbers in the
 writeup. Runtime is seconds to a few minutes on any laptop.
 
