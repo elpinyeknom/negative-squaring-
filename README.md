@@ -29,7 +29,7 @@ python 3_final_with_clipping.py
 ```
 
 Each script is self-contained, seeded, and reproduces the numbers in the
-writeup. Runtime is seconds to a few minutes on any laptop.
+writeup. Runtime is seconds to a few minutes on any laptop.  To reproduce the 3-bit and 2-bit cliff results, change `BITS = 4` to `3` or `2` on line 4 of script 3.
 
 ## Honest limitations
 
