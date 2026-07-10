@@ -55,6 +55,25 @@ Three findings stand out:
 
 **Finding 3 — the leash is everything.** Unconstrained, the smart search overshot and made reasoning worse. Constrained so no tilt may exceed **half a rounding step**, it became the best method. This reframes what negative squaring really is: not adjusting weight values, but **choosing which way each borderline weight rounds**, informed by the entire chain of thought rather than one step ahead. The tilt is a voting advisor for coin-flip rounding decisions.
 
+## 4.5 The compression cliff: testing 4-bit, 3-bit, and 2-bit
+
+Rerunning the entire experiment at three compression levels:
+
+| Compression | Naive error | Pre-tilted error | Error removed | Wrong answers: naive → pre-tilted (of 50) |
+|---|---|---|---|---|
+| 4-bit | 0.0032 | 0.0007 | 77% | 20 → 5 |
+| 3-bit | 0.0757 | 0.0034 | 95% | 33 → 15 |
+| 2-bit | 0.1254 | 0.0399 | 68% | 20 → 19 (coin-flip territory) |
+
+Three conclusions. First, pre-tilted 3-bit matches naive 4-bit on accuracy
+and beats it on final decisions — the same reasoning quality in a model
+roughly 25% smaller. Second, the method helps most exactly where compression
+hurts most (95% removed at 3-bit). Third, it has a floor: at 2-bit, each
+weight has only four possible values, and choosing the better rounding of a
+ruined value cannot recover information that no longer exists. Negative
+squaring moves the reasoning cliff from ~4-bit down to ~3-bit; it does not
+abolish it.
+
 ## 5. Honest limitations
 
 - **Scale.** The toy has 49,000 weights; real models have billions. The principle is demonstrated; the engineering is not.
